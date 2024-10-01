@@ -1,0 +1,62 @@
+---
+interface Props {
+  href: string;
+  iconsrc: string;
+}
+
+const {href, iconsrc} = Astro.props;
+---
+
+    <a role="link" target="_blank" class="btna text-white opacity-90 font-semibold px-6 py-[5px]" href={href}>
+        <img class="imgicon" src={iconsrc} alt="icon">
+        <slot />
+    </a>
+
+    <script>
+      const anchors = document.querySelectorAll('.btna');
+    
+      anchors.forEach((anchor) => {
+        const img = anchor.querySelector<HTMLImageElement>('.imgicon');
+        
+        if (img) {
+          const originalSrc = img.src;
+          anchor.addEventListener('mouseenter', () => {
+            img.src = originalSrc.replace('FFFFFF', '000000');
+          });
+    
+          anchor.addEventListener('mouseleave', () => {
+            img.src = originalSrc;
+          });
+        }
+      });
+    </script>
+    
+
+<style>
+    
+    .imgicon{
+        width: 26px;
+        height: auto;
+        color: #ff0000;
+        filter: brightness(1) invert(0);
+    }
+
+    a{
+        gap: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #fff;
+        border-radius: 17px;
+        background-color: rgb(16, 20, 38);
+        transition: 0.2s ease;
+        font-size: 1rem;
+        vertical-align: middle;
+        
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+    }
+
+</style>

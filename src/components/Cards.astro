@@ -1,0 +1,57 @@
+---
+ interface Props {
+   imgc: string;
+   html: string;
+   js: string;
+   css: string;
+   sass: string;
+   react: string;
+   text: string;
+   par: string;
+//   h1: string;
+//   p: string;
+ }
+
+ const {imgc, html, js, css, sass, react ,text, par} = Astro.props;
+---
+
+
+<div class="card p-2 mt-4">
+    <img src={imgc} alt="img-proyectos">
+    <h1 class="text-white opacity-90 text-2xl font-semibold my-2">{text}</h1>
+    <p class="text-white opacitiy-90 my-3">{par}</p>
+    <div class="separador"></div>
+    <div class="tecnologias flex items-center justify-center gap-2">
+        <img title="html" class="tecimg" src={html} alt="tecnologias-img">
+        <img title="javascript" class="tecimg" src={js} alt="tecnologias-img">
+        <img title="sass" class="tecimg" src={sass} alt="sass">
+        <img title="css" class="tecimg" src={css} alt="">
+        <img title="React" class="tecimg" src={react} alt="">
+    </div>
+    
+</div>
+
+<style>
+
+.tecimg{
+    width: 40px;
+}
+
+.card{
+    border: solid 1px #fff;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    background-color: rgba(6, 0, 39, 0.918);
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.03);
+    }
+
+}
+
+</style>

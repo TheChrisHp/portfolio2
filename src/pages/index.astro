@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';		
+import PastillaT from '../components/PastillaTitle.astro';
+import ButtonsC from "../components/ButtonsC.astro";
+import Cards from '../components/Cards.astro';
+---
+
+<Layout title="Portfolio">
+	<section class="contenedor-title m-auto max-w-3xl">
+		<div class="cont-title">
+				<h1 class="text-white text-5xl m-auto font-bold flex items-center object-center gap-4">¡Hola!, Soy Christian<PastillaT>Disponible para Trabajar</PastillaT></h1>
+			<p class="font-bold text-white opacity-90">+2 años de experiencia en desarrollo web, Tencnólogo en Informática con conocimiento en Software y Hardware.</p>
+		</div>
+		<div class="conts-pastillas my-6 flex gap-4">
+			<ButtonsC iconsrc='https://img.icons8.com/sf-regular-filled/48/FFFFFF/linkedin.png' href="https://www.google.com">
+				LinkedIn
+			</ButtonsC>
+			<ButtonsC iconsrc='https://img.icons8.com/sf-regular-filled/48/FFFFFF/secured-letter.png' href="https://www.google.com">
+				Contacto
+			</ButtonsC>
+		</div>		
+	</section>
+	<section class="pt-8">
+		<div class="cont-title-proy m-auto max-w-4xl">
+			<h1 class="text-white text-5xl font-bold">Proyectos</h1>
+		</div>
+
+		<div class="cont-cards max-w-6xl m-auto mt-8">
+			<Cards react="" sass='https://img.icons8.com/color/48/sass.png' css='https://img.icons8.com/color/48/css3.png' js='https://img.icons8.com/color/48/javascript.png' html='https://img.icons8.com/color/48/html-5--v1.png' imgc='https://res.cloudinary.com/dfnton7oq/image/upload/v1727749071/Portfolio/Captura_de_pantalla_2024-09-30_231730_tfytlg.png' text='Cerrajeria JG' par='Sitio creado para un negocio de cerrajería en Montevideo Uruguay. Con el fin de encontrar nuevos clientes para el negocio.'></Cards>
+			<Cards react='' sass='https://img.icons8.com/color/48/sass.png' css='https://img.icons8.com/color/48/css3.png' js='https://img.icons8.com/color/48/javascript.png' html='https://img.icons8.com/color/48/html-5--v1.png' imgc='https://res.cloudinary.com/dfnton7oq/image/upload/v1726093914/Portfolio/Captura_de_pantalla_2024-09-11_193109_mbtorz.png' text='BYD Web Site' par='Página web hecha para la empresa de vehiculos BYD realizada como proyecto personal mostrando todas las características de la empresa.'></Cards>
+			<Cards react='' css='' sass='https://img.icons8.com/color/48/sass.png' js='https://img.icons8.com/color/48/css3.png' html='https://img.icons8.com/color/48/html-5--v1.png' imgc='https://res.cloudinary.com/dfnton7oq/image/upload/v1726094537/Portfolio/Captura_de_pantalla_2024-09-11_194200_ouqgjz.png' text='Sagrada Familia' par='Página web desarrollada y diseñada para la empresa "Sagrada Familia" en la que se enfocan y muestran todos los servicios de la misma.'></Cards>
+			<Cards react='https://img.icons8.com/plasticine/50/react.png' sass='https://img.icons8.com/color/48/sass.png' css='https://img.icons8.com/color/48/css3.png' js='https://img.icons8.com/color/48/javascript.png' html='https://img.icons8.com/color/48/html-5--v1.png' imgc='https://res.cloudinary.com/dfnton7oq/image/upload/v1726097109/Portfolio/Captura_de_pantalla_2024-09-11_202453_ld2jbl.png' text='Bocata Web Site' par='Página Web para un Supermercado de Uruguay creado como proyecto a presentar. El sitio contiene mailings de precios de sus productos, etc.'></Cards>
+			<Cards react='' sass='https://img.icons8.com/color/48/sass.png' css='https://img.icons8.com/color/48/css3.png' js='https://img.icons8.com/color/48/javascript.png' html='https://img.icons8.com/color/48/html-5--v1.png' imgc='https://res.cloudinary.com/dfnton7oq/image/upload/v1726020998/Portfolio/Captura_de_pantalla_2024-09-10_231615_akatbw.png' text='Flow Taxi' par='Aplicación de Clima programada para consultar el clima en vivo de varios paises gracias a una API, con varias funcionalidades implementadas.'></Cards>
+			<Cards react='' sass='https://img.icons8.com/color/48/sass.png' css='https://img.icons8.com/color/48/css3.png' js='https://img.icons8.com/color/48/javascript.png' html='https://img.icons8.com/color/48/html-5--v1.png' imgc='https://res.cloudinary.com/dfnton7oq/image/upload/v1726019091/Portfolio/Captura_de_pantalla_2024-09-10_224402_vozod8.png' text='Weather App' par='Aplicación Web para gestión financiera de taxistas incluidas liquidación de sueldos y datos de fichas personales así como gestión de empleados.'></Cards>
+		</div>
+	</section>
+	<section class="pt-8 pb-10">
+		<div class="cont-title-sobremi max-w-4xl m-auto">
+			<h1 class="text-white text-5xl font-bold">Sobre mi</h1>
+			<p class="mt-5 text-white font-semibold text-xl">Soy desarrollador web con experiencia en HTML, CSS, y JavaScript, especializado en la creación de páginas web como aplicaciones interactivas y soluciones personalizadas.</p>
+			<p class="mt-2 text-white font-semibold text-xl">Me apasiona diseñar proyectos eficientes y funcionales que mejoren la experiencia del usuario.</p>
+			<p class="mt-2 text-white font-semibold text-xl">He trabajado con tecnologías como MySQL y diversas librerías para optimizar el rendimiento visual y funcional de las aplicaciones o sitios web. Mi enfoque está en ofrecer una excelente calidad adaptados a las necesidades de cada cliente, ayudándolos a alcanzar sus objetivos con soluciones modernas y escalables.</p>
+		</div>
+	</section>
+</Layout>
+  
+
+<style>
+
+	.contenedor-title{
+		padding-top: 9rem;
+		/* max-width: 43rem; */
+	}
+	.cont-title{
+		margin: auto;
+		p{
+			margin-top: 10px;
+			font-size: 1.25rem;
+		}
+	}
+
+	/* cards */
+	.cont-cards{
+		/* border: solid 1px #fff; */
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 17px;
+		margin-bottom: 2rem;
+	}
+
+</style>
